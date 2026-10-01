@@ -1,0 +1,28 @@
+# created by virtualenv automatically
+# PyCharm
+.idea/
+*.iml
+
+# 虚拟环境
+.venv/
+venv/
+
+# Python编译缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 模型权重、大文件
+*.bin
+*.safetensors
+*.gguf
+
+# 日志输出
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
