@@ -1,5 +1,19 @@
+# Python
 .venv/
 __pycache__/
 *.py[cod]
+
+# HQin 运行时产物（会话/记忆/输入历史）
 .hqin_sessions/
-.idea/workspace.xml
+.hqin_memory/
+.hqin_history
+
+# IDE
+.idea/
+
+# 测试残留（沙盒权限锁死的 pytest 缓存、通知模块测试的 .lnk）
+pytest-cache-files-*
+.tmp_test.lnk
+
+# 解压测试产物
+restored/
