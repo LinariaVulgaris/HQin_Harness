@@ -1,8 +1,8 @@
 # HQin Harness
 
-> 个人学习项目：从零手写一个本地 CLI 编程智能体框架，不依赖 LangChain 等重框架。完整的设计演进过程记录在 [HQin_Harness计划.md](HQin_Harness计划.md)（19 个专题章节，含每一阶段的取舍与验收清单）。
+> 个人学习项目：从零实现一个本地 CLI 编程智能体框架，不依赖 LangChain 等重框架。完整的设计演进过程记录在 [HQin_Harness计划.md](HQin_Harness计划.md)（19 个专题章节，含每一阶段的取舍与验收清单）。
 
-LM Studio 供电 · 纯 Python · Windows 优先
+LM Studio 供LLM · 纯 Python · Windows 优先
 
 ## 创新点
 
@@ -12,21 +12,3 @@ LM Studio 供电 · 纯 Python · Windows 优先
 - **三档权限模式**（`/mode ask|workspace|full`）：免审批 ≠ 免安全，`full` 模式下沙盒越界拦截、语法检查、浏览器敏感标签全部保留
 - **任务前 git 快照 + `/undo`**：放开文件写免审批的同时给一键后悔药
 
-## 快速开始
-
-```bash
-python -m venv .venv
-.venv\Scripts\pip install -r requirements.txt
-.venv\Scripts\python main.py -w D:\your\project
-.venv\Scripts\python -m notifier --register   # 注册 Windows 通知（一次性）
-```
-
-需要先在 [LM Studio](https://lmstudio.ai/) 加载模型并启动本地 Server（默认 `http://127.0.0.1:1234/v1`）。
-
-## 测试
-
-```bash
-.venv\Scripts\python -m unittest discover -s tests   # 195 项离线单测
-```
-
-环境变量（`HQIN_MODEL` / `HQIN_MODE` / `HQIN_NOTIFY_SOUND` 等）见 `config.py` 或会话内 `/config`。
